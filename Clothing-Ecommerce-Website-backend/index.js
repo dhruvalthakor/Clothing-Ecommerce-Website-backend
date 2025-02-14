@@ -10,7 +10,7 @@ const cartRouter = require("./routers/cartRouter");
 
 const app = express();
 var corsOptions = {
-  origin: 'http://example.com',
+  origin: 'https://clothing-ecommerce-website-seven.vercel.app',
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 }
 app.use(cors(corsOptions));
