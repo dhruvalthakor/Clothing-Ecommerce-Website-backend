@@ -10,13 +10,12 @@ const cartRouter = require("./routers/cartRouter");
 
 const app = express();
 
-app.use(
-  cors({
-    origin: ["http://localhost:5173","https://clothing-ecommerce-website-seven.vercel.app"], // Allow both local dev and production
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true, // If using cookies or authentication headers
-  })
-);
+app.use(cors({
+  origin: ["http://localhost:5173", "https://clothing-ecommerce-website-seven.vercel.app"], // Allow both development and production
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true
+}));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
