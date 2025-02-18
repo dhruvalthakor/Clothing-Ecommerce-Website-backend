@@ -12,7 +12,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://clothing-ecommerce-website-seven.vercel.app"], // Allow local dev and production frontend
+    origin: "http://localhost:5173/", // Allow local dev and production frontend
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true // Needed for cookies or authentication
